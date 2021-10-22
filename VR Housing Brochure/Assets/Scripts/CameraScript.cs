@@ -4,25 +4,7 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
-    /*    [SerializeField] private Transform _playerBody;
-
-        private float mouseSensitivity = 100f;
-        private float inputX;
-        private float xRotation;
-
-        private void Update()
-        {
-            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-
-            xRotation -= mouseY;
-            xRotation = Mathf.Clamp(xRotation, -90f, 70f);
-
-            transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-            _playerBody.Rotate(Vector3.up * mouseX);
-        }*/
-
-    public bool isDragging = false;
+    private bool isDragging = false;
 
     // starting point of a camera movement
     float startMouseX;
