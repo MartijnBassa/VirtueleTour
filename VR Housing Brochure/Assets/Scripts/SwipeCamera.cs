@@ -4,13 +4,13 @@ using UnityEngine;
 public class SwipeCamera : MonoBehaviour
 {
     [SerializeField] private float _dragSpeed = 2f;
-    [SerializeField] private bool isDrag;
+    //[SerializeField] private bool isDrag;
 
     private InputManager _inputManager;
     private float _rotX;
     private float _rotY;
-    private bool wereDragging;
-    private float _slideSpeed = 10f;
+    //private bool wereDragging;
+    //private float _slideSpeed = 10f;
 
 
     public float DragSpeed { get; private set; }
@@ -22,8 +22,6 @@ public class SwipeCamera : MonoBehaviour
 
     private void Update()
     {
-        isDrag = _inputManager.IsDragging;
-
         if (_inputManager.IsDragging)
         {
 
