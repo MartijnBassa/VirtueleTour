@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Next360Photo : MonoBehaviour
 {
+    // Instead of changing the texture, changing the whole object may be necessary. 
+    // The buttons that contain the photos will remain the same throughout pictures. Resulting in the photos not linking up.
+    // If you go from one room to another, the buttons will have the photos from the previous room which makes no sense.
 
     //[SerializeField] private Material _equirectangularPhotoMaterial;
     [SerializeField] private GameObject _equirectangularPhotoSphere;
