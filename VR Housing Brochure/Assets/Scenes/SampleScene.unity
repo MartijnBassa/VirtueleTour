@@ -224,8 +224,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _equirectangularPhotoSphere: {fileID: 628353169}
   _equirectangularPhotoTextures:
-  - {fileID: 2800000, guid: d4883a3d461178347ac25f3f7a5f3076, type: 3}
   - {fileID: 2800000, guid: 5334f00ac6f81ec409ffdb7e174bc20b, type: 3}
+  - {fileID: 2800000, guid: d4883a3d461178347ac25f3f7a5f3076, type: 3}
   _photoIndex: 0
   _fadeUI: {fileID: 1292394779}
 --- !u!114 &238047275
@@ -1251,9 +1251,9 @@ Animation:
   m_GameObject: {fileID: 1292394779}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: d60d76006a711534e9f750938ae0291b, type: 2}
+  m_Animation: {fileID: 7400000, guid: 2f93bf0d801f7504e8870332cc02ef9b, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: d60d76006a711534e9f750938ae0291b, type: 2}
+  - {fileID: 7400000, guid: 2f93bf0d801f7504e8870332cc02ef9b, type: 2}
   - {fileID: 7400000, guid: 49e2fe6ef648a224ea894b596ce1d295, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
@@ -1409,6 +1409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dragSpeed: 3
+  isDrag: 0
 --- !u!81 &1353277002
 AudioListener:
   m_ObjectHideFlags: 0

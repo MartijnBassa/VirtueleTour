@@ -35,26 +35,26 @@ public class SwipeCamera : MonoBehaviour
             transform.eulerAngles = new Vector3(_rotY, _rotX, 0);
 
 
-            wereDragging = true;
-            Invoke("TurnDraggingOff", 0.3f);
+            //wereDragging = true;
+            //Invoke("TurnDraggingOff", 0.3f);
         }
 
 
-        if(!_inputManager.IsDragging && wereDragging)
+/*        if(!_inputManager.IsDragging && wereDragging)
         {
 
-            // find out new position after letting go of drag
-            //Vector3 newPosition = new Vector3(0f, 0f, 0f);
+             find out new position after letting go of drag
+            Vector3 newPosition = new Vector3(0f, 0f, 0f);
 
-            //transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, newPosition, _slideSpeed * Time.deltaTime);
-        }
+            transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, newPosition, _slideSpeed * Time.deltaTime);
+        }*/
 
 
-        
+
     }
 
-    private void TurnDraggingOff()
+/*    private void TurnDraggingOff()
     {
         wereDragging = false;
-    }
+    }*/
 }
