@@ -11,11 +11,16 @@ public class InputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SwipeCamera();
+    }
+
+    private void SwipeCamera()
+    {
         if (Input.GetMouseButton(0))
         {
             _isDragging = true;
         }
-        if(!Input.GetMouseButton(0))
+        if (!Input.GetMouseButton(0))
         {
             _isDragging = false;
         }
