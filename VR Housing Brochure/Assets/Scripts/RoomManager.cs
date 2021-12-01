@@ -7,7 +7,8 @@ public enum RoomType
     Room1,
     Room2,
     Room3,
-    Room4
+    Room4,
+    Room5
 }
 
 
@@ -33,6 +34,15 @@ public class RoomManager : Singleton<RoomManager>
                 if(_currentActiveRoomInfo != null)
                 {
                     _currentActiveRoomInfo.Room.gameObject.SetActive(false);
+                }
+
+                if(roomInfo.Material != null)
+                {
+                    RenderSettings.skybox = roomInfo.Material;
+                }
+                else
+                {
+                    RenderSettings.skybox = null;
                 }
 
                 roomInfo.Room.gameObject.SetActive(true);
