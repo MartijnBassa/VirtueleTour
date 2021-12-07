@@ -10,7 +10,7 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         {
             if (_get == null)
             {
-                Object[] objects = FindObjectsOfType(typeof(T));
+                Object[] objects = FindObjectsOfType(typeof(T), true);
                 if (objects.Length == 0)
                 {
                     GameObject tGameObject = new GameObject();
