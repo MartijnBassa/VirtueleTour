@@ -12,11 +12,15 @@ public class RoomInfo
     [SerializeField] private AudioSource _speakerAudioSource;
     [SerializeField] private AudioClip[] _speakerClips;
 
+    private int _welcomeCounter;
+   
+
     public RoomType RoomType => _roomType;
     public Room Room => _room;
     public Material Material => _material;
     public AudioClip AudioBackground => _audioBackground;
     public AudioSource SpeakerAudioSource => _speakerAudioSource;
     public AudioClip[] SpeakerClips => _speakerClips;
+    public int WelcomeCounter { get; set; }
 
 }
