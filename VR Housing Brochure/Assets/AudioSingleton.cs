@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioSingleton : MonoBehaviour
+public class AudioSingleton : Singleton<AudioSingleton>
 {
     // Start is called before the first frame update
     void Start()

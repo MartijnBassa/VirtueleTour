@@ -45,6 +45,11 @@ public class RoomManager : Singleton<RoomManager>
                     RenderSettings.skybox = null;
                 }
 
+                if(roomInfo.AudioClip != null)
+                {
+                    roomInfo.Room.gameObject.GetComponentInChildren<AudioSource>().clip = roomInfo.AudioClip;
+                }
+
                 roomInfo.Room.gameObject.SetActive(true);
 
                 _currentActiveRoomInfo = roomInfo;
