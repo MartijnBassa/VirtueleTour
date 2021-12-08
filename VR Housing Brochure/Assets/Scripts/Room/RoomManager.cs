@@ -18,6 +18,7 @@ public class RoomManager : Singleton<RoomManager>
     [SerializeField] private RoomType _startRoomType;
 
     private RoomInfo _currentActiveRoomInfo;
+    private int welcomeCounter;
 
     private void Start()
     {
@@ -45,9 +46,23 @@ public class RoomManager : Singleton<RoomManager>
                     RenderSettings.skybox = null;
                 }
 
-                if(roomInfo.AudioClip != null)
+                if(roomInfo.AudioBackground != null)
                 {
-                    roomInfo.Room.gameObject.GetComponentInChildren<AudioSource>().clip = roomInfo.AudioClip;
+                    roomInfo.Room.gameObject.GetComponentInChildren<AudioSource>().clip = roomInfo.AudioBackground;
+                }
+
+                if(roomInfo.SpeakerAudioSource != null)
+                {
+                    if (welcomeCounter <= 0)
+                    {
+                        roomInfo.SpeakerAudioSource.clip = roomInfo.SpeakerClips[welcomeCounter];
+                        CountWelcomes();
+                    }
+                    else
+                    {
+                        roomInfo.SpeakerAudioSource.clip = roomInfo.SpeakerClips[welcomeCounter];
+                    }
+
                 }
 
                 roomInfo.Room.gameObject.SetActive(true);
@@ -62,6 +77,16 @@ public class RoomManager : Singleton<RoomManager>
         foreach (RoomInfo roomInfo in _roomInfos)
         {
             roomInfo.Room.gameObject.SetActive(false);
+        }
+    }
+
+    private void CountWelcomes()
+    {
+        welcomeCounter++;
+
+        if(welcomeCounter >= 1)
+        {
+            welcomeCounter = 1;
         }
     }
 }
