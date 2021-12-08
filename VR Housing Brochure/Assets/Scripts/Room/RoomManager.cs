@@ -23,6 +23,7 @@ public class RoomManager : Singleton<RoomManager>
     {
         DeactivateAllRooms();
         SwitchRoom(_startRoomType);
+
     }
 
     public void SwitchRoom(RoomType roomType)
@@ -38,9 +39,9 @@ public class RoomManager : Singleton<RoomManager>
                 }
 
                 // check if next room has skybox info, set skybox to 360 video
-                if(roomInfo.Material != null)
+                if(roomInfo.SkyboxMaterial != null)
                 {
-                    RenderSettings.skybox = roomInfo.Material;
+                    RenderSettings.skybox = roomInfo.SkyboxMaterial;
                 }
                 else
                 {
@@ -76,6 +77,18 @@ public class RoomManager : Singleton<RoomManager>
         }
     }
 
+    public void SwitchRoomTexture(int index)
+    {
+        foreach (RoomInfo roomInfo in _roomInfos)
+        {
+            if(roomInfo.RoomType == _currentActiveRoomInfo.RoomType)
+            {
+                Debug.Log(index);
+                roomInfo.Room.gameObject.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", roomInfo.SwitchRoomTextures[index]);
+            }
+        }
+    }
+
     private void DeactivateAllRooms()
     {
         foreach (RoomInfo roomInfo in _roomInfos)
@@ -92,5 +105,5 @@ public class RoomManager : Singleton<RoomManager>
         {
             roomInfo.WelcomeCounter = 1;
         }
-    }
+    }    
 }
