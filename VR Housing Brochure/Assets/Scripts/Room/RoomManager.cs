@@ -19,11 +19,16 @@ public class RoomManager : Singleton<RoomManager>
 
     private RoomInfo _currentActiveRoomInfo;
 
-    private void Start()
+    private int _numberOfImages;
+
+    public int NumberOfImages => _numberOfImages;
+
+    private void Awake()
     {
         DeactivateAllRooms();
         SwitchRoom(_startRoomType);
 
+        _numberOfImages = _currentActiveRoomInfo.SwitchRoomTextures.Length;
     }
 
     public void SwitchRoom(RoomType roomType)
@@ -73,6 +78,7 @@ public class RoomManager : Singleton<RoomManager>
                 roomInfo.Room.gameObject.SetActive(true);
 
                 _currentActiveRoomInfo = roomInfo;
+
             }
         }
     }
@@ -83,7 +89,6 @@ public class RoomManager : Singleton<RoomManager>
         {
             if(roomInfo.RoomType == _currentActiveRoomInfo.RoomType)
             {
-                Debug.Log(index);
                 roomInfo.Room.gameObject.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", roomInfo.SwitchRoomTextures[index]);
             }
         }
