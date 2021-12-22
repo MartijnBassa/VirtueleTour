@@ -8,13 +8,13 @@ using Valve.VR.Extras;
 
 public class SceneHandler : MonoBehaviour
 {
-    public SteamVR_LaserPointer laserPointer;
+    [SerializeField] private SteamVR_LaserPointer _laserPointerLeft;
+    [SerializeField] private SteamVR_LaserPointer _laserPointerRight;
 
     void Awake()
     {
-        laserPointer.PointerIn += PointerInside;
-        laserPointer.PointerOut += PointerOutside;
-        laserPointer.PointerClick += PointerClick;
+        _laserPointerLeft.PointerClick += PointerClick;
+        _laserPointerRight.PointerClick += PointerClick;
     }
 
     public void PointerClick(object sender, PointerEventArgs e)
@@ -22,16 +22,5 @@ public class SceneHandler : MonoBehaviour
         e.target.gameObject.GetComponent<Button>().onClick.Invoke();
         
 
-    }
-
-    public void PointerInside(object sender, PointerEventArgs e)
-    {
-        Debug.Log("Inside");
-
-    }
-
-    public void PointerOutside(object sender, PointerEventArgs e)
-    {
-        Debug.Log("Outside");
     }
 }

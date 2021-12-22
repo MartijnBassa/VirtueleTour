@@ -26,7 +26,6 @@ namespace Valve.VR.Extras
 
         Transform previousContact = null;
 
-
         private void Start()
         {
             if (pose == null)
@@ -38,16 +37,17 @@ namespace Valve.VR.Extras
                 Debug.LogError("No ui interaction action has been set on this component.", this);
 
 
-            holder = new GameObject();
+            //holder = new GameObject();
             holder.transform.parent = this.transform;
             holder.transform.localPosition = Vector3.zero;
-            holder.transform.localRotation = Quaternion.identity;
+            //holder.transform.localRotation = Quaternion.identity;
 
             pointer = GameObject.CreatePrimitive(PrimitiveType.Cube);
             pointer.transform.parent = holder.transform;
             pointer.transform.localScale = new Vector3(thickness, thickness, 100f);
             pointer.transform.localPosition = new Vector3(0f, 0f, 50f);
             pointer.transform.localRotation = Quaternion.identity;
+
             BoxCollider collider = pointer.GetComponent<BoxCollider>();
             if (addRigidBody)
             {
@@ -91,15 +91,16 @@ namespace Valve.VR.Extras
 
         private void Update()
         {
-            if (!isActive)
+            if (isActive)
             {
                 isActive = true;
                 this.transform.GetChild(0).gameObject.SetActive(true);
             }
 
+
             float dist = 100f;
 
-            Ray raycast = new Ray(transform.position, transform.forward);
+            Ray raycast = new Ray(holder.transform.position, holder.transform.forward);
             RaycastHit hit;
             bool bHit = Physics.Raycast(raycast, out hit);
 
@@ -144,15 +145,18 @@ namespace Valve.VR.Extras
 
             if (interactWithUI != null && interactWithUI.GetState(pose.inputSource))
             {
+                pointer.gameObject.SetActive(true);
                 pointer.transform.localScale = new Vector3(thickness * 5f, thickness * 5f, dist);
                 pointer.GetComponent<MeshRenderer>().material.color = clickColor;
             }
             else
             {
+                pointer.gameObject.SetActive(false);
                 pointer.transform.localScale = new Vector3(thickness, thickness, dist);
                 pointer.GetComponent<MeshRenderer>().material.color = color;
             }
             pointer.transform.localPosition = new Vector3(0f, 0f, dist / 2f);
+
         }
     }
 
