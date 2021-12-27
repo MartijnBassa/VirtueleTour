@@ -21,31 +21,5 @@ public class Room : MonoBehaviour
     protected int _currentRoomId;
     protected Texture _sphereTexture;
 
-    public Room()
-    {
-
-    }
-
-    public void SetPreviousDirection(Direction direction)
-    {
-;
-        _previousDirection = direction;
-    }
-
-    public void SetDirection(Direction direction)
-    {
-
-        _direction = direction;
-    }
-
-    public Direction GetDirection()
-    {
-        return _direction;
-    }
-
-    public Direction GetPreviousDirection()
-    {
-        return _previousDirection;
-    }
 
 }

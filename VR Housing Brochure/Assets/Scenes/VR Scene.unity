@@ -2035,7 +2035,6 @@ GameObject:
   - component: {fileID: 238047277}
   - component: {fileID: 238047276}
   - component: {fileID: 238047275}
-  - component: {fileID: 238047279}
   - component: {fileID: 238047274}
   m_Layer: 5
   m_Name: Canvas World Space
@@ -2141,25 +2140,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.015925825, y: 0.051806748}
   m_SizeDelta: {x: 7.8614, y: 4.6027}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &238047279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 238047273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdde2de78be54c647b5966f1c3d410d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _skyBoxes:
-  - {fileID: 2100000, guid: 4929324a2f7504146bed63859a9dd9bc, type: 2}
-  - {fileID: 2100000, guid: ad85b7cf0fe15684e90777d8df4860ca, type: 2}
-  _videoIndex: 0
-  _equirectangularVideoClips:
-  - {fileID: 1302664588}
-  - {fileID: 0}
 --- !u!1 &243674499
 GameObject:
   m_ObjectHideFlags: 0
@@ -3540,6 +3520,7 @@ GameObject:
   - component: {fileID: 486242542}
   - component: {fileID: 486242541}
   - component: {fileID: 486242545}
+  - component: {fileID: 486242546}
   m_Layer: 5
   m_Name: Options_Dropdown
   m_TagString: Untagged
@@ -3686,6 +3667,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraToLookAt: {fileID: 1928302936}
+--- !u!61 &486242546
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486242539}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.3784485, y: 0.018837929}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 158.91266, y: 30.072165}
+  m_EdgeRadius: 0
 --- !u!1 &488425875
 GameObject:
   m_ObjectHideFlags: 0
@@ -4521,7 +4528,6 @@ GameObject:
   - component: {fileID: 626108157}
   - component: {fileID: 626108156}
   - component: {fileID: 626108155}
-  - component: {fileID: 626108154}
   - component: {fileID: 626108153}
   m_Layer: 5
   m_Name: Canvas World Space 3
@@ -4565,25 +4571,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _photoViewer: {fileID: 1565063184}
---- !u!114 &626108154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 626108151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdde2de78be54c647b5966f1c3d410d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _skyBoxes:
-  - {fileID: 2100000, guid: 4929324a2f7504146bed63859a9dd9bc, type: 2}
-  - {fileID: 2100000, guid: ad85b7cf0fe15684e90777d8df4860ca, type: 2}
-  _videoIndex: 0
-  _equirectangularVideoClips:
-  - {fileID: 1302664588}
-  - {fileID: 0}
 --- !u!114 &626108155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4722,7 +4709,7 @@ Transform:
   m_GameObject: {fileID: 628353169}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.12251222, y: -0.09162265, z: -0.0117866695}
-  m_LocalScale: {x: 5.211676, y: 5.211676, z: 5.211676}
+  m_LocalScale: {x: 9.707123, y: 9.707123, z: 9.707123}
   m_Children:
   - {fileID: 238047278}
   - {fileID: 895938752}
@@ -4783,7 +4770,6 @@ GameObject:
   - component: {fileID: 649777232}
   - component: {fileID: 649777231}
   - component: {fileID: 649777230}
-  - component: {fileID: 649777229}
   - component: {fileID: 649777228}
   m_Layer: 5
   m_Name: Canvas World Space 5
@@ -4827,25 +4813,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _photoViewer: {fileID: 1565063184}
---- !u!114 &649777229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649777226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdde2de78be54c647b5966f1c3d410d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _skyBoxes:
-  - {fileID: 2100000, guid: 4929324a2f7504146bed63859a9dd9bc, type: 2}
-  - {fileID: 2100000, guid: ad85b7cf0fe15684e90777d8df4860ca, type: 2}
-  _videoIndex: 0
-  _equirectangularVideoClips:
-  - {fileID: 1302664588}
-  - {fileID: 0}
 --- !u!114 &649777230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5092,7 +5059,7 @@ Transform:
   m_GameObject: {fileID: 696109330}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.12251222, y: -0.09162265, z: -0.0117866695}
-  m_LocalScale: {x: 5.211676, y: 5.211676, z: 5.211676}
+  m_LocalScale: {x: 9.822967, y: 9.822967, z: 9.822967}
   m_Children:
   - {fileID: 1906588436}
   - {fileID: 2083110927}
@@ -5873,7 +5840,7 @@ Transform:
   m_GameObject: {fileID: 826344934}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.12251222, y: -0.09162265, z: -0.0117866695}
-  m_LocalScale: {x: 5.211676, y: 5.211676, z: 5.211676}
+  m_LocalScale: {x: 9.822967, y: 9.822967, z: 9.822967}
   m_Children:
   - {fileID: 626108152}
   - {fileID: 669737855}
@@ -6959,7 +6926,7 @@ Transform:
   m_GameObject: {fileID: 948946895}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.12251222, y: -0.09162265, z: -0.0117866695}
-  m_LocalScale: {x: 5.211676, y: 5.211676, z: 5.211676}
+  m_LocalScale: {x: 9.822967, y: 9.822967, z: 9.822967}
   m_Children:
   - {fileID: 1564149944}
   - {fileID: 878415149}
@@ -11432,7 +11399,6 @@ GameObject:
   - component: {fileID: 1564149949}
   - component: {fileID: 1564149948}
   - component: {fileID: 1564149947}
-  - component: {fileID: 1564149946}
   - component: {fileID: 1564149945}
   m_Layer: 5
   m_Name: Canvas World Space  2
@@ -11476,25 +11442,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _photoViewer: {fileID: 1565063184}
---- !u!114 &1564149946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1564149943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdde2de78be54c647b5966f1c3d410d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _skyBoxes:
-  - {fileID: 2100000, guid: 4929324a2f7504146bed63859a9dd9bc, type: 2}
-  - {fileID: 2100000, guid: ad85b7cf0fe15684e90777d8df4860ca, type: 2}
-  _videoIndex: 0
-  _equirectangularVideoClips:
-  - {fileID: 1302664588}
-  - {fileID: 0}
 --- !u!114 &1564149947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13380,7 +13327,7 @@ Transform:
   m_GameObject: {fileID: 1809626926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8848, y: 1.8848, z: 1.8848}
   m_Children:
   - {fileID: 649777227}
   - {fileID: 1302664590}
@@ -14702,7 +14649,6 @@ GameObject:
   - component: {fileID: 1906588441}
   - component: {fileID: 1906588440}
   - component: {fileID: 1906588439}
-  - component: {fileID: 1906588438}
   - component: {fileID: 1906588437}
   m_Layer: 5
   m_Name: Canvas World Space 4
@@ -14746,25 +14692,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _photoViewer: {fileID: 1565063184}
---- !u!114 &1906588438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906588435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdde2de78be54c647b5966f1c3d410d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _skyBoxes:
-  - {fileID: 2100000, guid: 4929324a2f7504146bed63859a9dd9bc, type: 2}
-  - {fileID: 2100000, guid: ad85b7cf0fe15684e90777d8df4860ca, type: 2}
-  _videoIndex: 0
-  _equirectangularVideoClips:
-  - {fileID: 1302664588}
-  - {fileID: 0}
 --- !u!114 &1906588439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15635,7 +15562,7 @@ MonoBehaviour:
     _speakerClips: []
   - _roomType: 4
     _room: {fileID: 1809626928}
-    _skyboxMaterial: {fileID: 0}
+    _skyboxMaterial: {fileID: 2100000, guid: 4929324a2f7504146bed63859a9dd9bc, type: 2}
     _switchRoomTextures: []
     _audioBackground: {fileID: 0}
     _speakerAudioSource: {fileID: 0}
