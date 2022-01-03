@@ -3020,7 +3020,7 @@ GameObject:
   - component: {fileID: 382508445}
   - component: {fileID: 382508449}
   m_Layer: 5
-  m_Name: Canvas Scale
+  m_Name: Canvas Viewer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3095,8 +3095,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382508444}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.20070317}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9825, y: 0.9825, z: 0.9825}
   m_Children:
   - {fileID: 1565063185}
   - {fileID: 944594258751505984}
@@ -3106,8 +3106,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.015925825, y: 0.051806748}
-  m_SizeDelta: {x: 800, y: 458.10684}
+  m_AnchoredPosition: {x: 393, y: 221}
+  m_SizeDelta: {x: 800, y: 449.87277}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &382508449
 MonoBehaviour:
