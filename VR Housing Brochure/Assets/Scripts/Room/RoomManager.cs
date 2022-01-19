@@ -23,7 +23,7 @@ public class RoomManager : Singleton<RoomManager>
     private RoomInfo _currentActiveRoomInfo;
 
     private int _numberOfImages;
-    public float _welcomeTimer;
+    private float _welcomeTimer;
     private float _timeToWelcome = 60f;
 
     public int NumberOfImages => _numberOfImages;
