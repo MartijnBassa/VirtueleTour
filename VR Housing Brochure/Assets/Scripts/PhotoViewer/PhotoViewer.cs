@@ -20,7 +20,7 @@ public class PhotoViewer : MonoBehaviour
 
     public void PreviousPhoto()
     {
-        ClampPhotoIndex(_photoIndex++);
+        ClampPhotoIndex(_photoIndex--);
         _imageHolder.texture = _images[_photoIndex];
     }
 

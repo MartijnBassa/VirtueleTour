@@ -19,8 +19,15 @@ public class SceneHandler : MonoBehaviour
 
     public void PointerClick(object sender, PointerEventArgs e)
     {
-        e.target.gameObject.GetComponent<Button>().onClick.Invoke();
-        
+        if(e.target.gameObject.GetComponent<Button>() != null)
+        {
+            e.target.gameObject.GetComponent<Button>().onClick.Invoke();
+        }  
+/*
+        if(e.target.gameObject.GetComponent<Dropdown>() != null)
+        {
+            e.target.gameObject.GetComponent<Dropdown>().Show();
+        }*/
 
     }
 }

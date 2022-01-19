@@ -20,43 +20,12 @@ public class Next360Photo : MonoBehaviour
     // Change spheres texture to new texture
     public void NextPhoto()
     {
-        // SetDirection based on enum of button
-        //_currentRoom.SetDirection(_direction);
-        // Sets previousdirection (button to previous room) based off enum
-        //SetLookingDirection();
-
-        CanvasAnimation(_animationOn, false);
+        //CanvasAnimation(_animationOn, false);
         //_equirectangularPhotoSphere.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", _equirectangularPhotoTexture);
         RoomManager.Get.SwitchRoom(_roomType);
-        CanvasAnimation(_animationOff, true);
+        //CanvasAnimation(_animationOff, true);
         
     }
-
-    /*    private void SetLookingDirection()
-        {
-            switch (_currentRoom.GetDirection())
-            {
-                case Direction.North:
-                    _currentRoom.SetPreviousDirection(Direction.South);
-                    break;
-
-                case Direction.South:
-                    _currentRoom.SetPreviousDirection(Direction.North);
-                    break;
-
-                case Direction.East:
-                    _currentRoom.SetPreviousDirection(Direction.West);
-                    break;
-
-                case Direction.West:
-                    _currentRoom.SetPreviousDirection(Direction.East);
-                    break;
-
-                default:
-                    break;
-            }
-
-        }*/
 
     private void CanvasAnimation(string text, bool fadeOut)
     {
