@@ -23,6 +23,8 @@ public class RoomTextureOptions : MonoBehaviour
             SetRoomTexture(_dropdown);
         });
 
+        _dropdownOptions.RemoveRange(0, _dropdownOptions.Count);
+
         // on start create same amount of dropdown options as photos in roomInfo
         if (_roomManager.NumberOfImages > 0)
         {
