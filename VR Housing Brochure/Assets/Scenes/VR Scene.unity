@@ -2571,8 +2571,7 @@ MonoBehaviour:
     _audioBackground: {fileID: 0}
     _speakerAudioSource: {fileID: 0}
     _speakerClips: []
-  _startRoomType: 1
-  _welcomeTimer: 208.36084
+  _startRoomType: 0
 --- !u!4 &227334496
 Transform:
   m_ObjectHideFlags: 0
@@ -8580,7 +8579,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &902010546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10687,7 +10686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1197883131
 MonoBehaviour:
   m_ObjectHideFlags: 0
