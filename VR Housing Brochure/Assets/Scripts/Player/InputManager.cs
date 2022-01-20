@@ -5,13 +5,14 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     private bool _isDragging;
-
+    private bool _turnOffUI;
     public bool IsDragging { get { return _isDragging; } set { _isDragging = value;} }
+    public bool TurnOffUI { get { return _turnOffUI; } set { _turnOffUI = value; } }
 
-    // Update is called once per frame
     void Update()
     {
         SwipeCamera();
+        ControlUI();
     }
 
     private void SwipeCamera()
@@ -24,5 +25,14 @@ public class InputManager : MonoBehaviour
         {
             _isDragging = false;
         }
+    }
+
+    private void ControlUI()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            _turnOffUI = !_turnOffUI;
+        }   
+
     }
 }

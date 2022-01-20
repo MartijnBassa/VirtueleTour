@@ -51,7 +51,7 @@ Shader "Unlit/PanoramaShader"
                 // Convert the direction to the fragment into latitude & longitude.
                 float3 pos = normalize(i.direction);
                 float2 uv;
-                uv.x = atan2(pos.z, pos.x) * 0.5f;
+                uv.x = -atan2(pos.z, pos.x) * 0.5f;
                 uv.y = asin(pos.y);
 
                 // Scale and shift into the 0...1 texture coordinate range.

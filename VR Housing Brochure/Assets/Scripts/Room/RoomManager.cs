@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public enum RoomType
@@ -27,6 +25,7 @@ public class RoomManager : Singleton<RoomManager>
     private float _timeToWelcome = 60f;
 
     public int NumberOfImages => _numberOfImages;
+    public RoomInfo CurrentActiveRoomInfo => _currentActiveRoomInfo;
 
     private void Awake()
     {
